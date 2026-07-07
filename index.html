@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elo — Regularização de Empresas | São Paulo</title>
+<meta name="description" content="A Elo cuida da regularização e da burocracia da sua empresa, do começo ao dia a dia. Abertura, regularização, certidões, licenças e adequação à reforma tributária. Sem juridiquês.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#16284A; --navy-deep:#0F1D38; --gold:#C49A45; --gold-soft:#D8BE7A;
+  --cream:#EFE9DC; --cream-bg:#F4F1EA; --paper:#FBFAF6;
+  --ink:#1B2430; --muted:#5C6672; --line:#E4DECF; --white:#fff;
+  --r:14px; --maxw:1140px;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+img,svg{display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;color:var(--navy);letter-spacing:.2px}
+h1{font-size:clamp(2.6rem,6vw,4.4rem);font-weight:700}
+h2{font-size:clamp(2rem,4.2vw,3.1rem)}
+h3{font-size:1.4rem}
+p{font-size:1.05rem}
+.eyebrow{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--sans);font-size:.74rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.eyebrow .mini{width:30px;height:18px;flex:0 0 auto}
+.lead{font-size:1.18rem;color:var(--muted)}
+svg.rings,svg.mini{color:var(--navy)}
+.on-dark svg.rings,.on-dark svg.mini,svg.rings.on-dark,svg.mini.on-dark,.b2b-card svg.rings{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--sans);font-weight:600;font-size:1rem;padding:.85rem 1.6rem;border-radius:999px;border:1.5px solid transparent;cursor:pointer;transition:transform .15s ease,box-shadow .2s ease,background .2s ease,color .2s ease;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn--primary{background:var(--navy);color:var(--cream);box-shadow:0 6px 20px rgba(22,40,74,.18)}
+.btn--primary:hover{box-shadow:0 10px 26px rgba(22,40,74,.28)}
+.btn--gold{background:var(--gold);color:var(--navy)}
+.btn--gold:hover{box-shadow:0 10px 26px rgba(196,154,69,.35)}
+.btn--ghost{border-color:var(--navy);color:var(--navy);background:transparent}
+.btn--ghost:hover{background:var(--navy);color:var(--cream)}
+.btn--lightghost{border-color:rgba(255,255,255,.5);color:#fff;background:transparent}
+.btn--lightghost:hover{background:#fff;color:var(--navy)}
+.wa-ic{width:18px;height:18px;fill:currentColor}
+header{position:sticky;top:0;z-index:50;background:rgba(251,250,246,.94);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
+header.scrolled{border-color:var(--line);box-shadow:0 2px 18px rgba(22,40,74,.06)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:.6rem}
+.brand .rings{width:46px;height:30px}
+.brand .name{font-family:var(--serif);font-weight:700;font-size:1.7rem;color:var(--navy);line-height:1}
+.menu{display:flex;align-items:center;gap:2rem}
+.menu a.link{font-size:.96rem;font-weight:500;color:var(--ink);opacity:.85;transition:opacity .2s,color .2s}
+.menu a.link:hover{opacity:1;color:var(--navy)}
+.menu .btn{padding:.6rem 1.15rem;font-size:.92rem}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{width:24px;height:2px;background:var(--navy);transition:.3s}
+.hero{background:linear-gradient(160deg,#0F1D38,#16284A 62%);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(196,154,69,.18),transparent 65%);top:-180px;right:-140px;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:84px 0 92px}
+.hero h1{margin:1.1rem 0 1.3rem;color:#fff}
+.hero h1 .accent{color:var(--gold);font-style:italic}
+.hero .lead{max-width:30rem;color:rgba(239,233,220,.82)}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+.hero-art{position:relative;display:flex;justify-content:center;align-items:center;min-height:300px}
+.hero-art .rings{width:min(100%,380px);height:auto;filter:drop-shadow(0 18px 40px rgba(22,40,74,.14))}
+.trust{display:flex;gap:1.4rem;flex-wrap:wrap;margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid rgba(255,255,255,.16)}
+.trust span{font-size:.86rem;color:rgba(239,233,220,.72);display:flex;align-items:center;gap:.45rem}
+.trust b{color:#fff}
+.section{padding:92px 0}
+.section--cream{background:var(--cream-bg)}
+.sec-head{max-width:42rem;margin-bottom:3rem}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head h2{margin:.8rem 0 1rem}
+.sec-head p{color:var(--muted);font-size:1.12rem}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about-grid .big{font-family:var(--serif);font-size:clamp(1.6rem,2.6vw,2.1rem);color:var(--navy);line-height:1.25}
+.about-grid p+p{margin-top:1rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:30px 26px;transition:transform .2s,box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 38px rgba(22,40,74,.10);border-color:#D9CFB4}
+.card .tick{width:34px;height:34px;border-radius:50%;background:var(--cream-bg);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.card .tick svg{width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:1.8}
+.card h3{margin-bottom:.5rem}
+.card p{font-size:.98rem;color:var(--muted)}
+.checkup{background:var(--navy);color:var(--cream);position:relative;overflow:hidden}
+.checkup .glow{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(196,154,69,.16),transparent 65%);top:-160px;right:-120px;pointer-events:none}
+.checkup-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;position:relative}
+.checkup h2{color:#fff}
+.checkup p{color:rgba(239,233,220,.82);font-size:1.1rem;margin-top:1rem}
+.semaforo{display:flex;flex-direction:column;gap:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:26px}
+.sema-row{display:flex;align-items:center;gap:14px}
+.dot{width:16px;height:16px;border-radius:50%;flex:0 0 auto;box-shadow:0 0 0 4px rgba(255,255,255,.06)}
+.dot.green{background:#46B16B} .dot.amber{background:var(--gold)} .dot.red{background:#D85B4A}
+.sema-row b{color:#fff;font-size:1rem} .sema-row small{display:block;color:rgba(239,233,220,.6);font-size:.84rem;font-weight:400}
+.checkup .btn{margin-top:2rem}
+.reforma .sec-head .tag{display:inline-block;background:rgba(196,154,69,.14);color:#9a7727;font-size:.78rem;font-weight:600;padding:.3rem .8rem;border-radius:999px;letter-spacing:.04em;margin-bottom:.4rem}
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:14px;position:relative}
+.tl{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:26px 22px;position:relative}
+.tl .yr{font-family:var(--serif);font-size:2.1rem;font-weight:700;color:var(--gold);line-height:1}
+.tl h3{font-size:1.12rem;margin:.5rem 0 .4rem}
+.tl p{font-size:.92rem;color:var(--muted)}
+.reforma-note{margin-top:26px;border-left:3px solid var(--gold);background:var(--cream-bg);padding:18px 22px;border-radius:0 var(--r) var(--r) 0;font-size:.98rem;color:var(--muted)}
+.reforma-note b{color:var(--navy)}
+.sols{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.sol{background:var(--white);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:0 var(--r) var(--r) 0;padding:28px 30px;transition:transform .2s,box-shadow .25s,border-color .25s}
+.sol:hover{transform:translateY(-4px);box-shadow:0 16px 38px rgba(22,40,74,.10)}
+.sol h3{font-size:1.3rem;margin-bottom:.5rem}
+.sol p{font-size:.98rem;color:var(--muted)}
+.sol .micro{display:block;margin-top:.7rem;font-size:.82rem;color:var(--navy);opacity:.72}
+.sol-note{margin-top:28px;font-size:.9rem;color:var(--muted);text-align:center;max-width:46rem;margin-left:auto;margin-right:auto}
+@media(max-width:640px){.sols{grid-template-columns:1fr}}
+.b2b{background:var(--paper)}
+.b2b-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.b2b-card{background:var(--navy);color:var(--cream);border-radius:18px;padding:40px;position:relative;overflow:hidden}
+.b2b-card .rings{width:64px;height:42px;margin-bottom:18px}
+.b2b-card h3{color:#fff;font-size:1.7rem;margin-bottom:.7rem}
+.b2b-card p{color:rgba(239,233,220,.82);font-size:1rem;margin-bottom:1.5rem}
+.values{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.val .n{font-family:var(--serif);font-size:1.35rem;color:var(--navy);font-weight:600;display:flex;align-items:center;gap:.5rem;margin-bottom:.5rem}
+.val .n::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--gold);flex:0 0 auto}
+.val p{font-size:.95rem;color:var(--muted)}
+.cta{background:var(--navy-deep);color:var(--cream);text-align:center}
+.cta h2{color:#fff;max-width:24rem;margin:0 auto 1rem}
+.cta p{color:rgba(239,233,220,.8);max-width:32rem;margin:0 auto 2rem;font-size:1.1rem}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+footer{background:var(--navy-deep);color:rgba(239,233,220,.7);padding:64px 0 30px;border-top:1px solid rgba(255,255,255,.08)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)}
+.foot-brand .b{display:flex;align-items:center;gap:.6rem;margin-bottom:1rem}
+.foot-brand .rings{width:48px;height:31px}
+.foot-brand .name{font-family:var(--serif);font-size:1.7rem;color:#fff;font-weight:700}
+.foot-brand p{font-size:.95rem;max-width:22rem;color:rgba(239,233,220,.65)}
+.foot-col h4{font-family:var(--sans);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;font-weight:600}
+.foot-col a,.foot-col p{display:block;font-size:.95rem;color:rgba(239,233,220,.72);margin-bottom:.6rem}
+.foot-col a:hover{color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:24px;font-size:.84rem;color:rgba(239,233,220,.5)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:900px){
+  .hero-grid,.about-grid,.checkup-grid,.b2b-grid{grid-template-columns:1fr}
+  .hero-art{order:-1;min-height:auto}
+  .hero-art .rings{width:230px}
+  .cards{grid-template-columns:1fr 1fr}
+  .values{grid-template-columns:1fr 1fr}
+  .timeline{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .menu{position:fixed;inset:76px 0 auto 0;background:var(--paper);flex-direction:column;align-items:flex-start;gap:1.1rem;padding:24px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:transform .35s ease;box-shadow:0 16px 30px rgba(22,40,74,.12)}
+  .menu.open{transform:translateY(0)}
+  .menu a.link{font-size:1.1rem}
+  .menu .btn{width:100%}
+  .burger{display:flex}
+  .section{padding:64px 0}
+  .hero-grid{padding:54px 0 64px}
+  .cards,.values,.foot-grid{grid-template-columns:1fr}
+  .b2b-card{padding:30px}
+}
+@media(prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <clipPath id="eloWeave" clipPathUnits="userSpaceOnUse"><rect x="25" y="27" width="14.5" height="13.5"/></clipPath>
+    <symbol id="eloRings" viewBox="0 0 64 40">
+      <circle cx="40" cy="20" r="15" fill="none" stroke="#C49A45" stroke-width="2.4"/>
+      <circle cx="24" cy="20" r="15" fill="none" stroke="currentColor" stroke-width="2.4"/>
+      <circle cx="40" cy="20" r="15" fill="none" stroke="#C49A45" stroke-width="2.4" clip-path="url(#eloWeave)"/>
+    </symbol>
+  </defs>
+</svg>
+<header id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Elo — início">
+      <svg class="rings" aria-hidden="true"><use href="#eloRings"/></svg>
+      <span class="name">Elo</span>
+    </a>
+    <nav class="menu" id="menu">
+      <a class="link" href="#sobre">Sobre</a>
+      <a class="link" href="#servicos">Serviços</a>
+      <a class="link" href="#checkup">Check-up</a>
+      <a class="link" href="#reforma">Reforma</a>
+      <a class="link" href="#solucoes">Soluções fiscais</a>
+      <a class="link" href="#contadores">Contadores</a>
+      <a class="btn btn--primary" href="https://wa.me/5511999999999" target="_blank" rel="noopener">
+        <svg class="wa-ic" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zM6.597 20.13c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.515 5.26l-.999 3.648 3.972-.955z"/></svg>
+        WhatsApp
+      </a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<section class="hero on-dark">
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <span class="eyebrow"><svg class="mini" aria-hidden="true"><use href="#eloRings"/></svg>Regularização de empresas · São Paulo</span>
+      <h1>Cuidamos da burocracia. <span class="accent">Você cuida do seu negócio.</span></h1>
+      <p class="lead">A Elo é a assessoria especialista em deixar — e manter — a sua empresa regular. Do começo ao dia a dia, sem juridiquês e do seu lado.</p>
+      <div class="hero-cta">
+        <a class="btn btn--gold" href="#checkup">Fazer meu Check-up</a>
+        <a class="btn btn--lightghost" href="https://wa.me/5511999999999" target="_blank" rel="noopener">Falar no WhatsApp</a>
+      </div>
+      <div class="trust">
+        <span><b>Abertura</b> &amp; regularização</span>
+        <span><b>Pronto</b> para a reforma tributária</span>
+        <span><b>Parceiro</b> de contadores</span>
+      </div>
+    </div>
+    <div class="hero-art reveal" aria-hidden="true">
+      <svg class="rings" viewBox="0 0 64 40">
+        <defs><clipPath id="hw"><rect x="25" y="27" width="14.5" height="13.5"/></clipPath></defs>
+        <circle cx="40" cy="20" r="15" fill="none" stroke="#C49A45" stroke-width="2.4"/>
+        <circle cx="24" cy="20" r="15" fill="none" stroke="#fff" stroke-width="2.4"/>
+        <circle cx="40" cy="20" r="15" fill="none" stroke="#C49A45" stroke-width="2.4" clip-path="url(#hw)"/>
+      </svg>
+    </div>
+  </div>
+</section>
+<section class="section" id="sobre">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <span class="eyebrow"><svg class="mini" aria-hidden="true"><use href="#eloRings"/></svg>Quem somos</span>
+      <p class="big" style="margin-top:1rem">A Elo cuida de toda a parte burocrática do seu negócio, para você focar no que faz de melhor: o seu trabalho.</p>
+    </div>
+    <div class="reveal">
+      <p>Abrir e manter uma empresa em dia no Brasil é complicado. São prazos, documentos, certidões, cadastros e regras que mudam o tempo todo. A maioria das pessoas não tem tempo nem paciência para isso — e é exatamente aí que a Elo entra.</p>
+      <p>Somos uma empresa especializada em regularização. Resolvemos a papelada de ponta a ponta, com linguagem clara e acompanhamento contínuo, para a sua empresa nunca mais ficar irregular. Se a documentação trava o seu negócio, o nosso trabalho é destravar.</p>
+    </div>
+  </div>
+</section>
+<section class="section section--cream" id="servicos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><svg class="mini" aria-hidden="true"><use href="#eloRings"/></svg>O que fazemos</span>
+      <h2>Tudo para a sua empresa ficar (e continuar) em dia.</h2>
+      <p>Da abertura ao dia a dia, a gente cuida da papelada para você não ter dor de cabeça.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal"><div class="tick"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg></div><h3>Abrir a sua empresa</h3><p>Do início ao fim — e do jeito certo: o tipo de empresa, o enquadramento e os CNAEs que fazem você pagar menos imposto.</p></div>
+      <div class="card reveal"><div class="tick"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><h3>Manter tudo em dia</h3><p>Alterações no contrato, certidões, licenças e alvarás. Tudo o que a empresa precisa para vender, contratar e crescer sem travas.</p></div>
+      <div class="card reveal"><div class="tick"><svg viewBox="0 0 24 24"><path d="M12 8v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></div><h3>Resolver pendências</h3><p>CNPJ irregular ou inapto, cadastros desatualizados, empresa para encerrar. A gente coloca a casa em ordem.</p></div>
+      <div class="card reveal"><div class="tick"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Plano Elo</h3><p>Como ter um departamento de burocracia sem contratar ninguém. Monitoramos prazos e obrigações e avisamos antes de virar problema.</p></div>
+      <div class="card reveal"><div class="tick"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 9h.01M9 13h.01M9 17h.01"/></svg></div><h3>Estruturar e proteger</h3><p>Organização entre sócios, governança e documentos internos. Para a empresa crescer com segurança e regras claras.</p></div>
+      <div class="card reveal"><div class="tick"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13A4 4 0 0 1 16 11"/></svg></div><h3>Terceiro setor e igrejas</h3><p>Associações, ONGs e instituições religiosas têm regras próprias — e a imunidade não dispensa obrigações. A gente cuida disso.</p></div>
+    </div>
+  </div>
+</section>
+<section class="section checkup on-dark" id="checkup">
+  <div class="glow"></div>
+  <div class="wrap checkup-grid">
+    <div class="reveal">
+      <span class="eyebrow"><svg class="mini" aria-hidden="true"><use href="#eloRings"/></svg>Comece por aqui</span>
+      <h2>O Check-up Elo</h2>
+      <p>Antes de tudo, é bom saber onde você está. O Check-up é um raio-X da sua empresa: em poucos dias, a gente analisa a sua situação e entrega um relatório simples, no esquema de semáforo — e já com o orçamento do que precisa ser corrigido.</p>
+      <a class="btn btn--gold" href="https://wa.me/5511999999999" target="_blank" rel="noopener">Quero fazer meu Check-up</a>
+    </div>
+    <div class="semaforo reveal">
+      <div class="sema-row"><span class="dot green"></span><div><b>Verde — em ordem</b><small>O que já está certo na sua empresa</small></div></div>
+      <div class="sema-row"><span class="dot amber"></span><div><b>Amarelo — atenção</b><small>O que merece um ajuste em breve</small></div></div>
+      <div class="sema-row"><span class="dot red"></span><div><b>Vermelho — urgente</b><small>O que precisa ser resolvido agora</small></div></div>
+    </div>
+  </div>
+</section>
+<section class="section reforma" id="reforma">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag">Reforma tributária</span>
+      <h2>A maior mudança nos impostos em 50 anos já começou.</h2>
+      <p>No novo sistema, o que a sua empresa declara que faz — a atividade, o CNAE, o cadastro — precisa estar coerente. Cadastro errado deixa de ser detalhe e vira problema. Quem se antecipa decide com calma; quem deixa para depois, paga mais caro.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl reveal"><div class="yr">2026</div><h3>A transição começou</h3><p>Fase de testes: as notas já trazem os novos impostos (CBS e IBS). Hora de arrumar a casa.</p></div>
+      <div class="tl reveal"><div class="yr">2027</div><h3>Começa para valer</h3><p>A cobrança da CBS entra em vigor. Cadastro em ordem deixa de ser opcional.</p></div>
+      <div class="tl reveal"><div class="yr">2033</div><h3>Sistema completo</h3><p>Fim da transição. As empresas preparadas chegam aqui sem sustos.</p></div>
+    </div>
+    <div class="reforma-note reveal"><b>Como a Elo ajuda:</b> revisamos a sua atividade, objeto e CNAEs, atualizamos cadastros e acompanhamos cada fase da transição. O cálculo de imposto é do seu contador, e a gente trabalha junto com ele — cuidamos da base que precisa estar certa para a conta fechar.</div>
+  </div>
+</section>
+<section class="section section--cream" id="solucoes">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><svg class="mini" aria-hidden="true"><use href="#eloRings"/></svg>Soluções fiscais</span>
+      <h2>Produtos sob medida para a virada tributária.</h2>
+      <p>Além de abrir e regularizar, a Elo tem soluções específicas para a sua empresa pagar o imposto certo e aproveitar oportunidades — cuidando da parte administrativa e trabalhando junto com contadores e advogados na parte técnica.</p>
+    </div>
+    <div class="sols">
+      <div class="sol reveal"><h3>Adequação à reforma</h3><p>Revisamos a sua atividade, o objeto e os CNAEs e deixamos o seu cadastro coerente com o novo sistema — para você não pagar imposto a mais nem ter notas rejeitadas.</p></div>
+      <div class="sol reveal"><h3>Empresa limpa</h3><p>Levantamos as pendências da sua empresa, organizamos o dossiê e cuidamos da parte operacional para regularizar débitos e liberar as suas certidões.</p></div>
+      <div class="sol reveal"><h3>Recuperação de créditos</h3><p>Ajudamos a identificar se a sua empresa pode ter pago imposto a mais e organizamos toda a documentação.<span class="micro">A apuração e a recuperação são feitas por profissionais habilitados.</span></p></div>
+      <div class="sol reveal"><h3>Habilitação e cadastros</h3><p>Deixamos a sua empresa apta a vender para o governo e para grandes empresas: SICAF, CRC e cadastros de fornecedor.</p></div>
+    </div>
+    <p class="sol-note reveal">A Elo cuida do apoio administrativo e cadastral. A parte técnica e jurídica — apuração de créditos, teses e processos — é conduzida por profissionais habilitados, com quem trabalhamos em parceria.</p>
+  </div>
+</section>
+<section class="section b2b" id="contadores">
+  <div class="wrap b2b-grid">
+    <div class="reveal">
+      <span class="eyebrow"><svg class="mini" aria-hidden="true"><use href="#eloRings"/></svg>Para contadores e escritórios</span>
+      <h2>Você cuida da contabilidade. A gente cuida do societário.</h2>
+      <p class="lead" style="margin-top:1rem">Parceria com sigilo, agilidade e o seu nome sempre à frente. Ideal para dar conta da onda de adequações da reforma sem sobrecarregar a sua equipe.</p>
+    </div>
+    <div class="b2b-card reveal">
+      <svg class="rings" aria-hidden="true"><use href="#eloRings"/></svg>
+      <h3>Mutirão de carteira</h3>
+      <p>A gente roda o Check-up na carteira inteira do seu escritório e devolve o mapa de quem precisa de adequação. Você fica com o relacionamento; a Elo executa.</p>
+      <a class="btn btn--gold" href="https://wa.me/5511999999999" target="_blank" rel="noopener">Quero ser parceiro</a>
+    </div>
+  </div>
+</section>
+<section class="section section--cream" id="valores">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow"><svg class="mini" aria-hidden="true"><use href="#eloRings"/></svg>O nosso jeito</span>
+      <h2>Por que a Elo</h2>
+    </div>
+    <div class="values">
+      <div class="val reveal"><div class="n">Clareza</div><p>Falamos a sua língua, sem juridiquês. Se você não entendeu, o trabalho não está completo.</p></div>
+      <div class="val reveal"><div class="n">Confiança</div><p>Cuidamos de documentos e informações sensíveis com sigilo e responsabilidade.</p></div>
+      <div class="val reveal"><div class="n">Compromisso</div><p>A gente não some depois do serviço. Acompanhamos a sua empresa para ela seguir em dia.</p></div>
+      <div class="val reveal"><div class="n">Transparência</div><p>Preço claro, escopo claro, prazo claro. Sem surpresa.</p></div>
+    </div>
+  </div>
+</section>
+<section class="section cta">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" style="justify-content:center;display:flex"><svg class="mini on-dark" aria-hidden="true"><use href="#eloRings"/></svg>Vamos resolver isso juntos?</span>
+      <h2 style="margin-top:1rem">Descubra se a sua empresa está 100% em dia.</h2>
+      <p>Faça o Check-up Elo e, em poucos dias, você sabe exatamente o que está em ordem — e o que ajustar se não estiver.</p>
+      <div class="cta-btns">
+        <a class="btn btn--gold" href="https://wa.me/5511999999999" target="_blank" rel="noopener">Fazer meu Check-up</a>
+        <a class="btn btn--lightghost" href="https://wa.me/5511999999999" target="_blank" rel="noopener">Falar no WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="on-dark">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="b"><svg class="rings" aria-hidden="true"><use href="#eloRings"/></svg><span class="name">Elo</span></div>
+        <p>Somos a ligação entre você e tudo aquilo que mantém o seu negócio firme e seguro. Regularização de empresas, sem dor de cabeça.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Serviços</h4>
+        <a href="#servicos">Abertura de empresas</a>
+        <a href="#servicos">Regularização</a>
+        <a href="#checkup">Check-up Elo</a>
+        <a href="#reforma">Adequação à reforma</a>
+        <a href="#contadores">Para contadores</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contato</h4>
+        <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:contato@eloregularizacao.com.br">contato@eloregularizacao.com.br</a>
+        <p>São Paulo · SP</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Elo — Regularização de Empresas.</span>
+      <span>Apoio administrativo e societário. Não prestamos serviços advocatícios nem contábeis.</span>
+    </div>
+  </div>
+</footer>
+<script>
+const head=document.querySelector('header');
+addEventListener('scroll',()=>head.classList.toggle('scrolled',scrollY>10));
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>menu.classList.toggle('open'));
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*70)+'ms';io.observe(el)});
+</script>
+</body>
+</html>
